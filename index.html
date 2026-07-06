@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UX Principles — Customer Apps</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- HOME VIEW: hero + principles grid -->
+  <main id="home" class="view">
+    <section class="hero" aria-label="Title">
+      <p class="hero__date">17 June 2026</p>
+      <h1 class="hero__title">UX Principles<br />Customer Apps</h1>
+      <span class="hero__rule" aria-hidden="true"></span>
+      <p class="hero__hint" aria-hidden="true">Scroll</p>
+    </section>
+
+    <section class="principles" aria-label="The five principles">
+      <div class="principles__inner">
+        <h2 class="principles__heading">The five principles</h2>
+        <ul class="grid" id="principle-grid"></ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- DETAIL VIEW: a single principle -->
+  <article id="detail" class="view detail" hidden>
+    <header class="detail__bar">
+      <a href="#/" class="back" id="back-link">
+        <span aria-hidden="true">&larr;</span> All principles
+      </a>
+      <span class="detail__count" id="detail-count"></span>
+    </header>
+
+    <div class="detail__body">
+      <div class="detail__title-col">
+        <h1 class="detail__title" id="detail-title"></h1>
+        <span class="detail__rule" aria-hidden="true"></span>
+      </div>
+      <div class="detail__content" id="detail-content"></div>
+    </div>
+
+    <nav class="detail__nav" aria-label="Principle navigation">
+      <a class="pnav pnav--prev" id="prev-link" hidden>
+        <span aria-hidden="true">&larr;</span> Back
+      </a>
+      <a class="pnav pnav--next" id="next-link" hidden>
+        Next <span aria-hidden="true">&rarr;</span>
+      </a>
+    </nav>
+  </article>
+
+  <script src="app.js"></script>
+</body>
+</html>
